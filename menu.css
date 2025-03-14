@@ -7,62 +7,66 @@ body {
     color: #333;
 }
 
+/* Header */
 .menu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin-top: 70px;
     text-align: center;
+    padding:10px;
+    color:rgb(4, 236, 4);
 }
 
+h1 {
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Cart Styles */
 .cart-container {
     position: fixed;
-    top: 10px;
-    right: 20px;
+    top: 60px;
+    right: 10px;
     background-color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: flex;
     align-items: center;
-}
-.cart-container span {
-    margin-left: 10px;
+    font-size: 16px;
     font-weight: bold;
 }
+
+.cart-container span {
+    margin-left: 10px;
+}
+
+/* Cart Details */
 .cart-details {
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    top: 102px;
     right: 20px;
     background-color: white;
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 250px;
+    display: none;
 }
-.cart-items {
-    max-height: 150px;
-    overflow-y: auto;
-    margin-top: 10px;
-}
-.cart-items p {
-    margin: 5px 0;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
+
+.cart-details h3 {
+    margin: 0;
+    text-align: center;
 }
 .remove-item {
     cursor: pointer;
-    color: red;
+    color: rgb(231, 16, 213);
     font-weight: bold;
+    text-align: right;
 }
-.total-price {
-    font-weight: bold;
-    margin-top: 10px;
-}
+
 .pay-button {
-    background-color: #4CAF50;
+    background-color: #2bc925;
     color: white;
     border: none;
     padding: 10px;
@@ -71,23 +75,22 @@ body {
     width: 100%;
     margin-top: 10px;
 }
+
 .pay-button:hover {
-    background-color: #0056b3;
+    background-color: blue;
 }
 
-h1 {
-    color: #4CAF50;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
+/* Menu Grid Layout */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* Menu Item */
 .menu-item {
     background: white;
     border-radius: 10px;
@@ -112,15 +115,14 @@ h1 {
 .menu-item h3 {
     color: #4CAF50;
     font-size: 1.5em;
-    margin-bottom: 10px;
 }
 
 .menu-item .price {
     font-size: 1.2em;
     color: #555;
-    margin-bottom: 15px;
 }
 
+/* Order Button */
 .order-btn {
     background: #4CAF50;
     color: white;
@@ -134,4 +136,65 @@ h1 {
 
 .order-btn:hover {
     background: #45a049;
+}
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(4, 109, 4);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    width: 150px;
+    height: 100%;
+    background-color: #4df038;
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 1;
+}
+.sidebar a {
+    padding: 15px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar a:hover, .sidebar a.active {
+    background-color: #495057;
+    font-size: 18px;
+    color: yellow;
+}
+.content {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(4, 236, 4);
+    text-transform: uppercase;
+}
+.login-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-button:hover {
+    background-color: #a71d2a;
 }
