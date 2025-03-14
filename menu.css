@@ -9,9 +9,10 @@ body {
 
 /* Header */
 .menu-container {
+    margin-top: 70px;
     text-align: center;
-    padding: 10px;
-    margin: 0;
+    padding:10px;
+    color:rgb(4, 236, 4);
 }
 
 h1 {
@@ -22,9 +23,9 @@ h1 {
 
 /* Cart Styles */
 .cart-container {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    position: fixed;
+    top: 60px;
+    right: 10px;
     background-color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -43,7 +44,7 @@ h1 {
 /* Cart Details */
 .cart-details {
     position: absolute;
-    top: 50px;
+    top: 102px;
     right: 20px;
     background-color: white;
     padding: 15px;
@@ -56,6 +57,27 @@ h1 {
 .cart-details h3 {
     margin: 0;
     text-align: center;
+}
+.remove-item {
+    cursor: pointer;
+    color: rgb(231, 16, 213);
+    font-weight: bold;
+    text-align: right;
+}
+
+.pay-button {
+    background-color: #2bc925;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.pay-button:hover {
+    background-color: blue;
 }
 
 /* Menu Grid Layout */
@@ -115,7 +137,6 @@ h1 {
 .order-btn:hover {
     background: #45a049;
 }
-<<<<<<< HEAD
 
 .menu-bar {
     position: fixed;
@@ -137,7 +158,7 @@ h1 {
     position: fixed;
     top: 50px;
     left: -250px;
-    width: 250px;
+    width: 150px;
     height: 100%;
     background-color: #4df038;
     padding-top: 20px;
@@ -177,5 +198,3 @@ h1 {
 .login-button:hover {
     background-color: #a71d2a;
 }
-=======
->>>>>>> 7db5525d20816d5dd4f88476bdd1e1606bc9f267
