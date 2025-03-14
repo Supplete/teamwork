@@ -8,16 +8,66 @@ body {
     background: white;
     font-family: Arial, sans-serif;
 }
-
-.slide {
-    height: 100%;
-    width: 180px;
-    position: absolute;
-    background-color: #4CAF50;
-    transition: 0.5s ease;
-    transform: translateX(-180px);
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(4, 109, 4);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
 }
-
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #4df038;
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 1;
+}
+.sidebar a {
+    padding: 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar a:hover, .sidebar a.active {
+    background-color: #495057;
+    font-size: 18px;
+    color: yellow;
+}
+.content {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(4, 236, 4);
+    text-transform: uppercase;
+}
+.login-btn, .signup-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-button:hover {
+    background-color: #a71d2a;
+}
 h2 {
     color: white;
     font-weight: bolder;
@@ -28,113 +78,14 @@ h2 {
     pointer-events: none;
 }
 
-ul li {
-    list-style: none;
-}
-
-ul li a {
-    color: white;
-    font-weight: 800;
-    padding: 5px 0;
-    display: block;
-    text-decoration: none;
-    transition: 0.2s ease-out;
-}
-
-ul li:hover a {
-    color: whitesmoke;
-}
-
 input {
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
 }
 
-.toggle {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    z-index: 1;
-    cursor: pointer;
-    top: 10px;
-    left: 15px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.toggle .common {
-    position: absolute;
-    height: 2px;
-    width: 20px;
-    background-color: black;
-    border-radius: 50px;
-    transition: 0.3s ease;
-}
-
-.toggle .topline {
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.toggle .middleline {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.toggle .bottomline {
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-input:checked ~ .toggle .topline {
-    left: 2px;
-    top: 14px;
-    width: 25px;
-    transform: rotate(45deg);
-}
-
-input:checked ~ .toggle .bottomline {
-    left: 2px;
-    top: 14px;
-    width: 25px;
-    transform: rotate(-45deg);
-}
-
-input:checked ~ .toggle .middleline {
-    opacity: 0;
-    transform: translateX(20px);
-}
-
-input:checked ~ .slide {
-    transform: translateX(0);
-    box-shadow: 0 0 15px rgba(187, 112, 112, 0.5);
-}
-
-.login-btn, .signup-btn {
-    display: block;
-    width: 60%;
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    background: white;
-    color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.signup-btn {
-    margin-top: 10px;
-}
-
 .home {
+    margin-top: 30px;
     width: 90%;
     position: relative;
     height: 100%;
@@ -196,7 +147,7 @@ input:checked ~ .slide {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)
     .home {
         margin-left: 0;
         width: 100%;
@@ -209,4 +160,3 @@ input:checked ~ .slide {
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-}

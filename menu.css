@@ -115,3 +115,67 @@ h1 {
 .order-btn:hover {
     background: #45a049;
 }
+<<<<<<< HEAD
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(4, 109, 4);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #4df038;
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 1;
+}
+.sidebar a {
+    padding: 15px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar a:hover, .sidebar a.active {
+    background-color: #495057;
+    font-size: 18px;
+    color: yellow;
+}
+.content {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(4, 236, 4);
+    text-transform: uppercase;
+}
+.login-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-button:hover {
+    background-color: #a71d2a;
+}
+=======
+>>>>>>> 7db5525d20816d5dd4f88476bdd1e1606bc9f267
