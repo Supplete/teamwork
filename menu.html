@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu </title>
+    <title>Menu</title>
     <link rel="stylesheet" href="menu.css">
     <script defer src="menus.js"></script>
 </head>
@@ -11,6 +11,7 @@
     <div class="menu-container">
         <h1>Our Menu</h1>
     </div>
+
     <div class="cart-container" onclick="toggleCart()">
         🛒 <span id="cart-count">0</span>
     </div>
@@ -18,130 +19,31 @@
     <div class="cart-details" id="cart-details">
         <h3>Cart</h3>
         <div class="cart-items" id="cart-items"></div>
-        <p class="total-price" id="total-price">Total: $0</p>
+        <p class="total-price" id="total-price">Total: Ksh 0</p>
         <button class="pay-button">Make Payment</button>
     </div>
-        <div class="menu-grid">
-            <!-- Meal 1: Rice -->
-            <div class="menu-item">
-                <img src="images/rice.jpeg" alt="Rice">
-                              <h3>Rice</h3>
-                <p class="price">Ksh 20</p>
-                <button class="order-btn"  onclick="orderNow('Rice', 20)" >  Order Now</button>
-            </div>
 
-            <!-- Meal 2: Green Grams -->
-            <div class="menu-item">
-                <img src="images/ndengu.jpeg" alt="ndengu">
-                <h3>Green Grams</h3>
-                <p class="price">Ksh 20</p>
-                <button class="order-btn"  onclick="orderNow('Ndengu', 20)" >Order Now</button>
-            </div>
+    <div class="menu-grid">
+        <!-- Row 1 -->
+        <div class="menu-item"><img src="images/rice.jpeg" alt="Rice"><h3>Rice</h3><p class="price">Ksh 20</p><button class="order-btn" onclick="orderNow('Rice', 20)">Order Now</button></div>
+        <div class="menu-item"><img src="images/ndengu.jpeg" alt="Green Grams"><h3>Green Grams</h3><p class="price">Ksh 20</p><button class="order-btn" onclick="orderNow('Ndengu', 20)">Order Now</button></div>
+        <div class="menu-item"><img src="images/BEANS.jpeg" alt="Beans"><h3>Beans</h3><p class="price">Ksh 20</p><button class="order-btn" onclick="orderNow('Beans', 20)">Order Now</button></div>
+        <div class="menu-item"><img src="images/ugai.jpeg" alt="Ugali"><h3>Ugali</h3><p class="price">Ksh 20</p><button class="order-btn" onclick="orderNow('Ugali', 20)">Order Now</button></div>
+        <div class="menu-item"><img src="images/cabbage.jpeg" alt="Cabbage"><h3>Cabbage</h3><p class="price">Ksh 15</p><button class="order-btn" onclick="orderNow('Cabbage', 15)">Order Now</button></div>
+        
+        <!-- Row 2 -->
+        <div class="menu-item"><img src="images/meatt.jpeg" alt="Meat"><h3>Meat</h3><p class="price">Ksh 50</p><button class="order-btn" onclick="orderNow('Meat', 50)">Order Now</button></div>
+        <div class="menu-item"><img src="images/chap00.jpeg" alt="Chapati"><h3>Chapati</h3><p class="price">Ksh 10</p><button class="order-btn" onclick="orderNow('Chapati', 10)">Order Now</button></div>
+        <div class="menu-item"><img src="images/pilauuuu.jpeg" alt="Pilau"><h3>Pilau</h3><p class="price">Ksh 40</p><button class="order-btn" onclick="orderNow('Pilau', 40)">Order Now</button></div>
+        <div class="menu-item"><img src="images/rockbun.jpeg" alt="Rockbun"><h3>Rockbun</h3><p class="price">Ksh 20</p><button class="order-btn" onclick="orderNow('Rockbun', 20)">Order Now</button></div>
+        <div class="menu-item"><img src="images/mandazi.jpeg" alt="Mandazi"><h3>Mandazi</h3><p class="price">Ksh 10</p><button class="order-btn" onclick="orderNow('Mandazi', 10)">Order Now</button></div>
 
-            <!-- Meal 3: Beans -->
-            <div class="menu-item">
-                <img src="images/BEANS.jpeg" alt="Beans">
-                <h3>Beans</h3>
-                <p class="price">Ksh 20</p>
-                <button class="order-btn"  onclick="orderNow('Beans', 20)" ">Order Now</button>
-            </div>
-
-            <!-- Meal 4: Ugali -->
-            <div class="menu-item">
-                <img src="images/ugai.jpeg" alt="Ugali">
-                <h3>Ugali</h3>
-                <p class="price">Ksh 20</p>
-                <button class="order-btn"  onclick="orderNow('Ugali', 20)" >Order Now</button>
-            </div>
-
-            <!-- Meal 5: Cabbage -->
-            <div class="menu-item">
-                <img src="images/cabbage.jpeg" alt="Cabbage">
-                <h3>Cabbage</h3>
-                <p class="price">Ksh 15</p>
-                <button class="order-btn"  onclick="orderNow('Cabbage', 15)" >Order Now</button>
-            </div>
-
-            <!-- Meal 6: Meat -->
-            <div class="menu-item">
-                <img src="images/meatt.jpeg" alt="Meat">
-                <h3>Meat</h3>
-                <p class="price">Ksh 50</p>
-                <button class="order-btn"  onclick="orderNow('Meat', 50)" >Order Now</button>
-            </div>
-
-            <!-- Meal 7: Chapati -->
-            <div class="menu-item">
-                <img src="images/chap00.jpeg" alt="Chapati">
-                <h3>Chapati</h3>
-                <p class="price">Ksh 10</p>
-                <button class="order-btn"  onclick="orderNow('Chapati', 10)" >Order Now</button>
-            </div>
-
-            <!-- Meal 8: Marabun -->
-            <div class="menu-item">
-                <img src="images/pilauuuu.jpeg" alt="pilau">
-                <h3>pilau</h3>
-                <p class="price">Ksh 40</p>
-                <button class="order-btn"  onclick="orderNow('Pilau', 20)" >Order Now</button>
-            </div>
-
-            <!-- Meal 9: Rockbun -->
-            <div class="menu-item">
-                <img src="images/rockbun.jpeg"alt="Rockbun">
-                <h3>Rockbun</h3>
-                <p class="price">Ksh 20</p>
-                <button class="order-btn"  onclick="orderNow('Rockburn', 20)" >Order Now</button>
-            </div>
-
-            <!-- Meal 10: Mandazi -->
-            <div class="menu-item">
-                <img src="images/mandazi.jpeg"alt="mandazi">
-                <h3>Mandazi</h3>
-                <p class="price">Ksh 10</p>
-                <button class="order-btn"  onclick="orderNow('Mandazi', 10)" >Order Now</button>
-            </div>
-
-            <!-- Meal 11: Sukuma -->
-            <div class="menu-item">
-                <img src="images/sukuma.jpeg"alt="Sukuma">
-                <h3>Sukuma</h3>
-                <p class="price">Ksh 20</p>
-                <button class="order-btn"  onclick="orderNow('Sukuma', 20)" >Order Now</button>
-            </div>
-
-            <!-- Meal 12: Eggs -->
-            <div class="menu-item">
-                <img src="images/eggss.webp"alt="Eggs">
-                <h3>Eggs</h3>
-                <p class="price">Ksh 50</p>
-                <button class="order-btn"  onclick="orderNow('Eggs', 50)" >Order Now</button>
-            </div>
-
-            <!-- Meal 13: Omena -->
-            <div class="menu-item">
-                <img src="images/omena.jpeg" alt="omena">
-                <h3>Omena</h3>
-                <p class="price">Ksh 55</p>
-                <button class="order-btn"  onclick="orderNow('Omena', 55)" >Order Now</button>
-            </div>
-
-            <!-- Meal 14: Soda -->
-            <div class="menu-item">
-                <img src="images/soda.jpeg"alt="soda">
-                <h3>Soda</h3>
-                <p class="price">Ksh 50</p>
-                <button class="order-btn"  onclick="orderNow('Soda', 50)" >Order Now</button>
-            </div>
-
-            <!-- Meal 15: Tatton -->
-            <div class="menu-item">
-                <img src="images/tatton.jpeg"alt="Tatton">
-                <h3>Tatton</h3>
-                <p class="price" >Ksh 40</p>
-                <button class="order-btn"  onclick="orderNow('Tatton', 40)" >Order Now</button>
-            </div>
-        </div>
+        <!-- Row 3 -->
+        <div class="menu-item"><img src="images/sukuma.jpeg" alt="Sukuma"><h3>Sukuma</h3><p class="price">Ksh 20</p><button class="order-btn" onclick="orderNow('Sukuma', 20)">Order Now</button></div>
+        <div class="menu-item"><img src="images/eggss.webp" alt="Eggs"><h3>Eggs</h3><p class="price">Ksh 50</p><button class="order-btn" onclick="orderNow('Eggs', 50)">Order Now</button></div>
+        <div class="menu-item"><img src="images/omena.jpeg" alt="Omena"><h3>Omena</h3><p class="price">Ksh 55</p><button class="order-btn" onclick="orderNow('Omena', 55)">Order Now</button></div>
+        <div class="menu-item"><img src="images/soda.jpeg" alt="Soda"><h3>Soda</h3><p class="price">Ksh 50</p><button class="order-btn" onclick="orderNow('Soda', 50)">Order Now</button></div>
+        <div class="menu-item"><img src="images/tatton.jpeg" alt="Tatton"><h3>Tatton</h3><p class="price">Ksh 40</p><button class="order-btn" onclick="orderNow('Tatton', 40)">Order Now</button></div>
     </div>
 </body>
 </html>
