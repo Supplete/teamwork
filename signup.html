@@ -5,30 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src ="signup.js"></script>
 </head>
 <body>
     <div class="signup-container">
         <h2>SIGN UP</h2>
         <form>
+          <div class="input-class">
+            <i class="fa-solid fa-user"></i>
             <label for="name">NAME:</label>
             <input type="text" id="name" name="name" required>
+            
+          </div>
+<div class="input-class">
 
-            <label for="email">EMAIL:</label>
-            <input type="email" id="email" name="email" required>
+<i class="fa-solid fa-envelope"></i>
+  <label for="email">EMAIL:</label>
+  <input type="email" id="email" name="email" required>
+</div>
+<div class="input-class">
+  <i class="fa-solid fa-user"></i>
+  <label for="username">USERNAME:</label>
+  <input type="text" id="username" name="username" required>
 
-            <label for="username">USERNAME:</label>
-            <input type="text" id="username" name="username" required>
 
-            <label for="password">PASSWORD:</label>
-            <input type="password" id="password" name="password" required>
+</div>
+<div class="input-class">
+  <i class="fa-solid fa-lock"></i>
+  <label for="password">PASSWORD:</label>
+  <input type="password" id="password" name="password" required>
+</div>
+<div class="input-class">
 
-            <label for="confirm-password">CONFIRM PASSWORD:</label>
-            <input type="password" id="confirm-password" name="confirmpassword" required>
+<i class="fa-solid fa-lock"></i>
+  <label for="confirm-password">CONFIRM PASSWORD:</label>
+  <input type="password" id="confirm-password" name="confirmpassword" required>
+</div>
+
+
 
             <button type="submit">SIGN UP</button>
         </form>
         <p>Already have an account? <a href="login.html">LOG IN</a></p>
     </div>
+
+        
+<script>
+  document.getElementById('signupForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Get passwords from the form
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+    
+    // Gather form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+      // Send the form data to your backend's "/signup" endpoint.
+      // The backend should be set to connect to the database "usermanagement"
+      // where the Users table (or similar) is stored.
+      const response = await fetch('/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      alert(result.message);
+      
+    } catch (error) {
+      console.error('An error occurred during signup:', error);
+      alert('An error occurred. Please try again.');
+    }
+  });
+</script>
 </body>
 </html>

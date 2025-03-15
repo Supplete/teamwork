@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script defer src="login.js"></script>
 </head>
 <body>
     <div class="login-container">
         <h2>LOGIN FORM</h2>
         <form>
-            <label for="username">USERNAME:</label>
-            <input type="text" id="username" name="username" required>
-
+            <div class="input-class">
+                <i class="fa-solid fa-user"></i>
+                <label for="username">USERNAME:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+           
+<div class="input-class">
+    <i class="fa-solid fa-lock"></i>
             <label for="password">PASSWORD:</label>
             <input type="password" id="password" name="password" required>
-
+        </div>
             <button type="submit">LOG IN</button>
         </form>
         <p>Don't have an account? <a href="signup.html">SIGN UP</a></p>
+        <p class="recover"><a href="#">Forgot Password?</a></p>
     </div>
 </body>
 </html>
